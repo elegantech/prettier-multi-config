@@ -1,0 +1,10 @@
+node_modules/
+lib/
+dist/
+*.tgz
+*.tsbuildinfo
+tsconfig.*.tsbuildinfo
+/build
+.prettierrc.js
+.prettierrc.cjs
+.prettierrc.mjs

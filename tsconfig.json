@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.base.json",
+  "references": [
+    {
+      "path": "./tsconfig.main.json"
+    },
+    {
+      "path": "./tsconfig.internal.json"
+    },
+    {
+      "path": "./tsconfig.test.json"
+    }
+  ],
+  "files": [],
+  "compilerOptions": { "noEmit": true }
+}

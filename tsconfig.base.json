@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    // "baseUrl": "./src",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "importHelpers": true,
+    // "incremental": true,
+    "moduleDetection": "auto",
+    "lib": ["ESNext"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "newLine": "lf",
+    "noImplicitOverride": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "sourceMap": false,
+    "strict": true,
+    "stripInternal": true,
+    "target": "ES2022",
+    "noEmitOnError": true,
+    "declaration": true,
+    "declarationMap": true,
+    "emitDecoratorMetadata": true,
+    "exactOptionalPropertyTypes": true,
+    // "extendedDiagnostics": true,
+    // "listEmittedFiles": true,
+
+    "paths": {
+      "@/*": ["./src/*"],
+      "@internal/*": ["./internal/*"],
+      "@tests/*": ["./tests/*"]
+    }
+  },
+  "exclude": ["dist", "build", "**/*.{test,spec}.ts", "internal"]
+}
