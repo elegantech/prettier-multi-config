@@ -1,4 +1,5 @@
 import { Plugin } from 'prettier';
+
 import { IOptionsWithoutPlugins } from './options-without-plugins';
 import { IPrettierOverride } from './prettier-override';
 

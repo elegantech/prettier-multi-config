@@ -1,5 +1,6 @@
-import { IOptionsWithoutPlugins, IPrettierPreset } from '@/contracts';
 import { LanguageVariant } from 'typescript';
+
+import { IOptionsWithoutPlugins, IPrettierPreset } from '~/contracts';
 
 /**
  * https://github.com/un-ts/prettier/tree/master/packages/sh#parser-options

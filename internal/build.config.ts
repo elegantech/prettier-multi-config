@@ -1,6 +1,8 @@
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+
 import { defineBuildConfig } from 'unbuild';
+
 import { CommentBuilder, EMPTY_NEW_LINE } from './utils/comment-builder';
 
 // TODO: Move to a separated workspace
@@ -66,8 +68,8 @@ export default defineBuildConfig([
     declaration: false,
     alias: {
       // TODO: Replace with @rollup/plugin-typescript (https://github.com/rollup/plugins/tree/master/packages/typescript)
-      '@': path.resolve(INTERNAL_DIR, '../src'),
-      '@internal': path.resolve(INTERNAL_DIR, '.'),
+      '~': path.resolve(INTERNAL_DIR, '../src'),
+      '~internal': path.resolve(INTERNAL_DIR, '.'),
     },
     rootDir: path.resolve(INTERNAL_DIR, '.'),
     clean: true, //! Important to be FALSE, to avoid clearing the project root 🤭.

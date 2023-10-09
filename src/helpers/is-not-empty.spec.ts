@@ -1,4 +1,5 @@
 import { describe, expect, test } from 'vitest';
+
 import { isNotEmpty } from './is-not-empty';
 
 describe('isNotEmpty(💬)', () => {

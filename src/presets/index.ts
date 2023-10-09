@@ -1,8 +1,9 @@
-import { IOptionsWithoutPlugins, IPrettierOverride, PresetPlugins } from '@/contracts';
-import { IMergeOverrideMultipleOptions, isNotEmpty, mergeOverrideMultiple } from '@/helpers';
+import { IOptionsWithoutPlugins, IPrettierOverride, PresetPlugins } from '~/contracts';
+import { IMergeOverrideMultipleOptions, isNotEmpty, mergeOverrideMultiple } from '~/helpers';
+
 import { preset as base } from './base';
 import { preset as php } from './php';
-import { IBashOptions, preset as sh } from './sh';
+import { preset as sh } from './sh';
 
 /**
  * List of available presets.
@@ -14,6 +15,7 @@ export type PresetName = (typeof AVAILABLE_PRESETS)[number];
 /**
  * Map of available presets.
  *
+ * FIXME: Por alguna razón, falla cuando se quita el internal
  * @internal
  */
 export const PRESETS_MAP = {
@@ -31,6 +33,8 @@ export type PresetMap = typeof PRESETS_MAP;
 //   php: IPrettierPreset<IPhpOptions>;
 //   sh: IPrettierPreset<IBashOptions>;
 // }
+
+// export type PresetMap = IPresetMap;
 // export const test: Partial<IPrettierPreset<IBashOptions>> = {};
 
 // Utility types to extract options type

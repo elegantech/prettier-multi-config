@@ -1,6 +1,6 @@
 import { isRegExp } from 'node:util/types';
 
-import { IOptionsWithoutPlugins, IPrettierOverride } from '@/contracts';
+import { IOptionsWithoutPlugins, IPrettierOverride } from '~/contracts';
 
 import { isNotEmpty } from './is-not-empty';
 import { IMergeOverrideOptions, mergeOverride } from './merge-override';

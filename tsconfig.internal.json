@@ -4,8 +4,8 @@
     "composite": true,
 
     "paths": {
-      "@/*": ["./src/*"],
-      "@internal/*": ["./internal/*"]
+      "~/*": ["./src/*"],
+      "~internal/*": ["./internal/*"]
     }
   },
   "include": ["./internal/**/*", "./src/**/*"],

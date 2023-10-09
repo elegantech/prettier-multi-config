@@ -1,5 +1,6 @@
-import { NonEmptyValue, PossibleEmptyValue } from '@/contracts/types';
 import { isRegExp } from 'node:util/types';
+
+import { NonEmptyValue, PossibleEmptyValue } from '~/contracts/types';
 
 /**
  * Checks if a value is not null, undefined, an empty/whitespace string, nor an empty array/object.

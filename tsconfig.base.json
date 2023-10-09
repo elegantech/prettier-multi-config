@@ -26,13 +26,14 @@
     "declarationMap": true,
     "emitDecoratorMetadata": true,
     "exactOptionalPropertyTypes": true,
+    "outDir": "./build/tsc",
     // "extendedDiagnostics": true,
     // "listEmittedFiles": true,
 
     "paths": {
-      "@/*": ["./src/*"],
-      "@internal/*": ["./internal/*"],
-      "@tests/*": ["./tests/*"]
+      "~/*": ["./src/*"],
+      "~internal/*": ["./internal/*"],
+      "~tests/*": ["./tests/*"]
     }
   },
   "exclude": ["dist", "build", "**/*.{test,spec}.ts", "internal"]

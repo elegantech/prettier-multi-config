@@ -1,4 +1,4 @@
-import { IOptionsWithoutPlugins, IPrettierPreset } from '@/contracts';
+import { IOptionsWithoutPlugins, IPrettierPreset } from '~/contracts';
 
 export interface IBaseOptions extends IOptionsWithoutPlugins {
   /**

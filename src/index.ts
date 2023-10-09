@@ -1,5 +1,6 @@
-import { getMergedGlobalOptionsFor, getMergedOverrideFor, getPluginsFor } from '@/presets';
 import { Config } from 'prettier';
+
+import { getMergedGlobalOptionsFor, getMergedOverrideFor, getPluginsFor } from '~/presets';
 
 /**
  * The default config to be used as default.

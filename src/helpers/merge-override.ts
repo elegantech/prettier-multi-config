@@ -1,4 +1,4 @@
-import { IOptionsWithoutPlugins, IPrettierOverride } from '@/contracts';
+import { IOptionsWithoutPlugins, IPrettierOverride } from '~/contracts';
 
 import { isNotEmpty } from './is-not-empty';
 

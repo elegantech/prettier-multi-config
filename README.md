@@ -56,7 +56,7 @@ Includes general base rules for all the languages/files officially supported by 
 `.prettierrc.mjs`:
 
 ```mjs
-import { defaultConfig } from '@elegantech/prettier-multi-config';
+import { defaultConfig } from '~elegantech/prettier-multi-config';
 
 const config = {
   // This includes the global options and the default plugins
@@ -91,7 +91,7 @@ Compatibility with PHP.
 > Note: You need to set the `phpVersion` option depending of your PHP environment.
 
 ```mjs
-import { defaultConfig } from '@elegantech/prettier-multi-config';
+import { defaultConfig } from '~elegantech/prettier-multi-config';
 
 const config = {
   // This includes the global options and the default plugins

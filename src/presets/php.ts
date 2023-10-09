@@ -1,4 +1,4 @@
-import { IOptionsWithoutPlugins, IPrettierPreset } from '@/contracts';
+import { IOptionsWithoutPlugins, IPrettierPreset } from '~/contracts';
 
 export type PhpVersion =
   | '5.0'

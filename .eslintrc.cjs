@@ -8,6 +8,49 @@ const defaultRules = {
   'no-console': 'warn',
   'unicorn/prefer-module': 'warn',
   'import/no-self-import': 'error',
+  'import/order': [
+    'warn',
+    {
+      'newlines-between': 'always',
+      alphabetize: {
+        // De esto se encarga el prettier
+        order: 'ignore',
+      },
+      groups: [
+        //
+        'builtin',
+        'external',
+        'internal',
+        [
+          //
+          'index',
+          'parent',
+          'sibling',
+        ],
+      ],
+      pathGroups: [
+        {
+          pattern: '~/**',
+          group: 'internal',
+        },
+        {
+          pattern: '~internal/**',
+          group: 'internal',
+        },
+        {
+          pattern: '~tests/**',
+          group: 'internal',
+        },
+      ],
+    },
+  ],
+  'import/newline-after-import': [
+    'warn',
+    {
+      count: 1,
+      considerComments: true,
+    },
+  ],
 };
 
 /**
@@ -129,7 +172,7 @@ module.exports = {
           './tsconfig.base.json',
           './tsconfig.internal.json',
           './tsconfig.test.json',
-          './tsconfig.bun.json',
+          './tsconfig.main.json',
         ],
       },
       rules: {

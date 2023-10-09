@@ -1,4 +1,5 @@
 import path from 'node:path';
+
 import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
@@ -15,8 +16,9 @@ export default defineConfig({
   resolve: {
     alias: {
       // '@': path.resolve(path.dirname(fileURLToPath(new URL('src', import.meta.url)))),
-      '@': path.resolve('./src'),
-      '@internal': path.resolve('./internal/src'),
+      '~': path.resolve('./src'),
+      '~tests': path.resolve('./tests'),
+      '~internal': path.resolve('./internal/src'),
     },
   },
   appType: 'custom',
