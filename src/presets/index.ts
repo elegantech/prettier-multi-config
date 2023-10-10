@@ -13,10 +13,19 @@ export const AVAILABLE_PRESETS = ['base', 'php', 'sh'] as const;
 export type PresetName = (typeof AVAILABLE_PRESETS)[number];
 
 /**
- * Map of available presets.
+ * Checks if specified string is a preset name and if it's available.
  *
- * FIXME: Por alguna razón, falla cuando se quita el internal
- * @internal
+ * @example
+ * if (isAvailablePreset('php')) {
+ *   // ...
+ * }
+ */
+export const isAvailablePreset = (value: string): value is PresetName => {
+  return AVAILABLE_PRESETS.includes(value as PresetName);
+};
+
+/**
+ * Map of available presets.
  */
 export const PRESETS_MAP = {
   base,
@@ -24,18 +33,7 @@ export const PRESETS_MAP = {
   sh,
 } as const;
 
-// export const a: IBashOptions = {};
-
 export type PresetMap = typeof PRESETS_MAP;
-
-// export interface IPresetMap {
-//   base: IPrettierPreset<IBaseOptions>;
-//   php: IPrettierPreset<IPhpOptions>;
-//   sh: IPrettierPreset<IBashOptions>;
-// }
-
-// export type PresetMap = IPresetMap;
-// export const test: Partial<IPrettierPreset<IBashOptions>> = {};
 
 // Utility types to extract options type
 export type PresetOptions<TPreset extends PresetName> = PresetMap[TPreset]['globalOptions'];

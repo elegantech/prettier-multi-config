@@ -1,5 +1,3 @@
-import { LanguageVariant } from 'typescript';
-
 import { IOptionsWithoutPlugins, IPrettierPreset } from '~/contracts';
 
 /**
@@ -9,7 +7,7 @@ export interface IBashOptions extends IOptionsWithoutPlugins {
   // parser
   keepComments?: boolean; // default `true`
   stopAt?: string;
-  variant?: LanguageVariant;
+  variant?: 0 | 1; // LanguageVariant enum
 
   // printer
   indent?: number;
