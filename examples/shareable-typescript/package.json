@@ -1,0 +1,35 @@
+{
+  "name": "prettier-multi-config-shareable-typescript-example",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Sample for shareable package with Typescript",
+  "author": {
+    "email": "nelson6e65@gmail.com",
+    "name": "Nelson Martell"
+  },
+  "license": "MIT",
+  "private": true,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs",
+      "default": "./dist/index.mjs"
+    }
+  },
+  "scripts": {
+    "build": "unbuild"
+  },
+  "dependencies": {
+    "tslib": "^2.6.2"
+  },
+  "devDependencies": {
+    "@prettier/plugin-php": "*",
+    "prettier": "*",
+    "prettier-plugin-organize-imports": "*",
+    "prettier-plugin-pkg": "*",
+    "prettier-plugin-sh": "^0.13.1",
+    "typescript": "*",
+    "unbuild": "*"
+  }
+}

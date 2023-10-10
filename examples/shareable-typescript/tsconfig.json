@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "outDir": "dist/tsc",
+    "lib": ["ESNext"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "paths": {
+      "~/*": ["./src/*"]
+    }
+  },
+  "exclude": ["./dist"]
+}

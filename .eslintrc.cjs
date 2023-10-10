@@ -173,6 +173,7 @@ module.exports = {
           './tsconfig.internal.json',
           './tsconfig.test.json',
           './tsconfig.main.json',
+          './examples/**/tsconfig.json',
         ],
       },
       rules: {

@@ -3,11 +3,18 @@
   "version": "0.0.0",
   "type": "module",
   "description": "Pre-configuration builder for Prettier 3 to support multiple file formats.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/elegantech/prettier-multi-config.git"
+  },
   "author": {
     "email": "nelson6e65@gmail.com",
     "name": "Nelson Martell"
   },
   "license": "Apache-2.0",
+  "workspaces": [
+    "examples/*"
+  ],
   "engines": {
     "node": ">=12.17.0"
   },
@@ -49,6 +56,7 @@
     "//postpostbuild:internal": "prettier --write ./.prettierrc.mjs",
     "build": "unbuild",
     "build:internal": "unbuild internal",
+    "build:watch": "watch 'npm run build' src",
     "fix:eslint": "eslint . --fix",
     "fix:style": "prettier --write .",
     "lint:all": "concurrently -t --success=all --timings  \"npm:lint:*(!all)\"",
@@ -73,7 +81,6 @@
     "@prettier/plugin-php": "^0.20.1"
   },
   "devDependencies": {
-    "@trivago/prettier-plugin-sort-imports": "^4.2.0",
     "@types/node": "^18.17.15",
     "@typescript-eslint/eslint-plugin": "^6.7.0",
     "@typescript-eslint/parser": "^6.7.0",
@@ -94,6 +101,7 @@
     "semantic-release": "^22.0.5",
     "typescript": "^5.2.2",
     "unbuild": "^2.0.0",
-    "vitest": "^0.34.4"
+    "vitest": "^0.34.4",
+    "watch": "^1.0.2"
   }
 }
