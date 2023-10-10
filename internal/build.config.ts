@@ -22,7 +22,6 @@ export default defineBuildConfig([
         input: 'configs/prettierrc.ts',
         name: '.prettierrc',
       },
-      //
       // './src/.prettierrc'
     ],
 
@@ -33,11 +32,10 @@ export default defineBuildConfig([
       inlineDependencies: true,
 
       output: {
-        exports: 'default',
-        preserveModules: false,
+        preserveModules: true,
 
-        externalImportAssertions: false,
-        inlineDynamicImports: true,
+        // externalImportAssertions: false,
+        // inlineDynamicImports: false,
         banner: (chunk: { facadeModuleId: string }): string => {
           const sourceModule = 'internal/' + chunk.facadeModuleId.split('/internal/')[1];
 
@@ -72,7 +70,7 @@ export default defineBuildConfig([
       '~internal': path.resolve(INTERNAL_DIR, '.'),
     },
     rootDir: path.resolve(INTERNAL_DIR, '.'),
-    clean: true, //! Important to be FALSE, to avoid clearing the project root 🤭.
+    clean: true,
     outDir: path.resolve(INTERNAL_DIR, '../build/internal'),
     // outDir: 'output',
   },
