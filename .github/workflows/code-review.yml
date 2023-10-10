@@ -1,0 +1,67 @@
+name: Code Review
+
+on:
+  # push:
+  #   branches:
+  #     - main
+
+  pull_request:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+  workflow_call:
+
+permissions:
+  contents: read # for checkout
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Linting types
+        run: npm run lint:ts
+
+      - name: Linting javascript
+        run: npm run lint:eslint
+
+      - name: Linting style
+        run: npm run lint:style
+
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    needs:
+      - lint
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Test
+        run: npm run test
+
+      - name: Build
+        run: npm run build
