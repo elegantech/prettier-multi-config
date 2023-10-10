@@ -36,7 +36,7 @@ jobs:
       - name: Linting types
         run: npm run lint:ts
 
-      - name: Linting javascript
+      - name: Linting code
         run: npm run lint:eslint
 
       - name: Linting style
