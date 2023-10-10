@@ -1,11 +1,11 @@
 {
   "name": "@elegantech/prettier-multi-config",
-  "version": "0.0.0",
+  "version": "0.0.0-development",
   "type": "module",
   "description": "Pre-configuration builder for Prettier 3 to support multiple file formats.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/elegantech/prettier-multi-config.git"
+    "url": "git+https://github.com/elegantech/prettier-multi-config.git"
   },
   "author": {
     "email": "nelson6e65@gmail.com",
@@ -74,14 +74,16 @@
     "test:ui": "vitest --ui"
   },
   "peerDependencies": {
-    "prettier": "^3.0.0",
-    "prettier-plugin-pkg": ">= 0.18.0"
+    "prettier": "^3.0.0"
   },
   "dependencies": {
     "tslib": "^2.6.2"
   },
   "optionalDependencies": {
-    "@prettier/plugin-php": "^0.20.1"
+    "@prettier/plugin-php": ">= 0.20.1",
+    "prettier-plugin-organize-imports": "^3.2.3",
+    "prettier-plugin-pkg": ">= 0.18.0",
+    "prettier-plugin-sh": ">= 0.13.1"
   },
   "devDependencies": {
     "@types/node": "^18.17.15",
