@@ -126,7 +126,7 @@ const defaultTypescriptRules = {
 module.exports = {
   root: true,
 
-  ignorePatterns: ['node_modules', 'build', 'dist', '!.*'],
+  ignorePatterns: ['node_modules', 'build', 'dist', '!.*', 'examples'],
 
   overrides: [
     {
@@ -173,7 +173,7 @@ module.exports = {
           './tsconfig.internal.json',
           './tsconfig.test.json',
           './tsconfig.main.json',
-          './examples/**/tsconfig.json',
+          // './examples/**/tsconfig.json',
         ],
       },
       rules: {
