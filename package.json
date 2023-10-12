@@ -40,12 +40,6 @@
     }
   },
   "types": "./dist/index.d.ts",
-  "files": [
-    "NOTICE",
-    "dist",
-    "README.md",
-    "LICENSE"
-  ],
   "keywords": [
     "prettier",
     "prettier-plugin",

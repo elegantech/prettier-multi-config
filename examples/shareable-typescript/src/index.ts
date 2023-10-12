@@ -4,6 +4,7 @@ import {
   getMergedOverrideFor,
   getPluginsFor,
 } from '@elegantech/prettier-multi-config/presets';
+
 import { Config } from 'prettier';
 
 const selectedPresets: PresetName[] = ['base', 'php', 'sh'];

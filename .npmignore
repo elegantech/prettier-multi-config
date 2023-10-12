@@ -1,7 +1,10 @@
-node_modules/
-.vscode
-.eslintrc.csj
-.nvmrc
-.prettierrc.js
-.jsconfig.json
-**/*.tsbuildinfo
+*
+# Ignore all, except:
+
+# Distribution files
+!dist/**/*
+
+# Assets
+!NOTICE
+!README.md
+!LICENSE
