@@ -3,7 +3,7 @@ import { fileURLToPath } from 'node:url';
 
 import { defineBuildConfig } from 'unbuild';
 
-import { CommentBuilder, EMPTY_NEW_LINE } from './utils/comment-builder';
+import { CommentBuilder, EMPTY_NEW_LINE } from './utils/comment-builder.js';
 
 // TODO: Move to a separated workspace
 

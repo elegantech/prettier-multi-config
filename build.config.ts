@@ -1,9 +1,9 @@
-import path from 'node:path';
+import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { defineBuildConfig } from 'unbuild';
 
-const ROOT_DIR = path.dirname(fileURLToPath(import.meta.url));
+const ROOT_DIR = dirname(fileURLToPath(import.meta.url));
 
 // const entries: BuildEntry[] = [
 //   //
@@ -24,7 +24,7 @@ export default defineBuildConfig([
     // entries, // Let it autodetect entries from package.json
     rollup: {
       dts: {
-        tsconfig: path.resolve(ROOT_DIR, './tsconfig.base.json'),
+        tsconfig: resolve(ROOT_DIR, './tsconfig.base.json'),
       },
       inlineDependencies: true,
       output: {
@@ -35,7 +35,7 @@ export default defineBuildConfig([
     },
     declaration: 'compatible',
     alias: {
-      '~': path.resolve(ROOT_DIR, './src'),
+      '~': resolve(ROOT_DIR, './src'),
     },
   },
 ]);

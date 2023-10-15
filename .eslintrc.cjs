@@ -1,4 +1,4 @@
-const path = require('node:path');
+// const path = require('node:path');
 
 /**
  * @type {import('eslint').Linter.RulesRecord}
@@ -166,15 +166,19 @@ module.exports = {
       parser: '@typescript-eslint/parser',
       plugins: ['@typescript-eslint', 'import', 'unicorn'],
       parserOptions: {
-        tsconfigRootDir: path.dirname('./'),
-        project: [
-          //
-          './tsconfig.base.json',
-          './tsconfig.internal.json',
-          './tsconfig.test.json',
-          './tsconfig.main.json',
-          // './examples/**/tsconfig.json',
-        ],
+        EXPERIMENTAL_useProjectService: true,
+        // project: true,
+        // tsconfigRootDir: path.dirname('./'),
+        // project: 'tsconfig.json',
+        // project: [
+        //   //
+        //   './tsconfig.base.json',
+        //   './tsconfig.configs.json',
+        //   './tsconfig.internal.json',
+        //   './tsconfig.test.json',
+        //   './tsconfig.main.json',
+        //   // './examples/**/tsconfig.json',
+        // ],
       },
       rules: {
         ...defaultRules,
