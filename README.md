@@ -40,7 +40,7 @@ Depending on how are you creating your own config file, you may choose to instal
 
 - `devDependencies` (`-D`, `--save-dev`).
 - `peerDependencies` (`--save-peer`).
-- `dependecies`.
+- `dependencies`.
 
 <!-- TODO: Add documentation about other types of installation -->
 
@@ -88,6 +88,18 @@ Compatibility with Shell Script for Bash or sh.
 
 ```sh
 npm add -D prettier-plugin-sh
+```
+
+### Multiline preset (`sh`)
+
+Multiline elements for some languages.
+
+#### Required plugins:
+
+- [prettier-plugin-multiline-arrays](https://github.com/electrovir/prettier-plugin-multiline-arrays)
+
+```sh
+npm add -D prettier-plugin-multiline-arrays
 ```
 
 ## Usage
@@ -150,7 +162,11 @@ import {
   getMergedOverrideFor,
 } from '@elegantech/prettier-multi-config/presets';
 
-const selectedPresets = ['base', 'php', 'sh'];
+const selectedPresets = [
+  'base',
+  'php',
+  'sh',
+];
 
 /** @type {import("prettier").Config} */
 const config = {
