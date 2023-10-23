@@ -7,5 +7,9 @@
     }
   },
   "include": ["./src/**/*"],
-  "exclude": ["dist", "build", "**/*.{test,spec}.ts"]
+  "exclude": [
+    "dist",
+    "build",
+    "**/*.{test,spec}.ts"
+  ]
 }

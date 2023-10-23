@@ -8,6 +8,12 @@
       "~tests/*": ["./tests/*"]
     }
   },
-  "include": ["**/*.{test,spec}.ts", "./tests/**/*.ts"],
-  "exclude": ["dist", "build"]
+  "include": [
+    "**/*.{test,spec}.ts",
+    "./tests/**/*.ts"
+  ],
+  "exclude": [
+    "dist",
+    "build"
+  ]
 }

@@ -6,6 +6,12 @@
     "module": "NodeNext",
     "moduleResolution": "NodeNext"
   },
-  "include": ["**/*.config.ts", "internal/utils/*.ts"],
-  "exclude": ["dist", "build"]
+  "include": [
+    "**/*.config.ts",
+    "internal/utils/*.ts"
+  ],
+  "exclude": [
+    "dist",
+    "build"
+  ]
 }

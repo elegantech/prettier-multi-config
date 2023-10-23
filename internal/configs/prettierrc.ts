@@ -6,13 +6,22 @@ import { getMergedGlobalOptionsFor, getMergedOverrideFor, getPluginsFor } from '
  * The default config to be used as default.
  */
 const config: Config = {
-  ...getMergedGlobalOptionsFor(['base', 'sh']),
+  ...getMergedGlobalOptionsFor([
+    'base',
+    'multiline',
+    'sh',
+  ]),
 
-  plugins: getPluginsFor(['base', 'sh']),
+  plugins: getPluginsFor([
+    'base',
+    'sh',
+    'multiline',
+  ]),
 
   overrides: [
     //
     ...getMergedOverrideFor('base'),
+    ...getMergedOverrideFor('multiline'),
     ...getMergedOverrideFor('sh'),
     {
       files: ['.prettierrc.json'],

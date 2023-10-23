@@ -44,7 +44,10 @@ export const mergeOverride = <TOptions extends IOptionsWithoutPlugins = IOptions
         files = [files];
       }
 
-      files = [...files, ...otherConfig.files];
+      files = [
+        ...files,
+        ...otherConfig.files,
+      ];
     }
 
     newConfig.files = files;
@@ -75,7 +78,10 @@ export const mergeOverride = <TOptions extends IOptionsWithoutPlugins = IOptions
           excludeFiles = [excludeFiles];
         }
 
-        excludeFiles = [...excludeFiles, ...otherConfig.excludeFiles];
+        excludeFiles = [
+          ...excludeFiles,
+          ...otherConfig.excludeFiles,
+        ];
       }
     }
 

@@ -7,7 +7,11 @@ import {
 
 import { Config } from 'prettier';
 
-const selectedPresets: PresetName[] = ['base', 'php', 'sh'];
+const selectedPresets: PresetName[] = [
+  'base',
+  'php',
+  'sh',
+];
 
 const config: Config = {
   // Add global configurations for selected presets

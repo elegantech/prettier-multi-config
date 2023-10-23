@@ -2,13 +2,19 @@ import { IOptionsWithoutPlugins, IPrettierOverride, PresetPlugins } from '~/cont
 import { IMergeOverrideMultipleOptions, isNotEmpty, mergeOverrideMultiple } from '~/helpers';
 
 import { preset as base } from './base';
+import { preset as multiline } from './multiline';
 import { preset as php } from './php';
 import { preset as sh } from './sh';
 
 /**
  * List of available presets.
  */
-export const AVAILABLE_PRESETS = ['base', 'php', 'sh'] as const;
+export const AVAILABLE_PRESETS = [
+  'base',
+  'php',
+  'sh',
+  'multiline',
+] as const;
 
 export type PresetName = (typeof AVAILABLE_PRESETS)[number];
 
@@ -31,6 +37,7 @@ export const PRESETS_MAP = {
   base,
   php,
   sh,
+  multiline,
 } as const;
 
 export type PresetMap = typeof PRESETS_MAP;
