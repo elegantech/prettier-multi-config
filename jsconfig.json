@@ -5,5 +5,8 @@
     "target": "ESNext",
     "strict": true
   },
-  "exclude": ["node_modules", "**/node_modules/*"]
+  "exclude": [
+    "node_modules",
+    "**/node_modules/*"
+  ]
 }

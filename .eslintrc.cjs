@@ -88,13 +88,23 @@ const defaultTypescriptRules = {
       selector: 'variable',
       types: ['boolean'],
       format: ['PascalCase'],
-      prefix: ['is', 'should', 'has', 'can', 'did', 'will'],
+      prefix: [
+        'is',
+        'should',
+        'has',
+        'can',
+        'did',
+        'will',
+      ],
     },
 
     {
       // Enforce that all variables are either in camelCase or UPPER_CASE
       selector: 'variable',
-      format: ['camelCase', 'UPPER_CASE'],
+      format: [
+        'camelCase',
+        'UPPER_CASE',
+      ],
     },
     {
       // Ignore destructured names
@@ -126,11 +136,21 @@ const defaultTypescriptRules = {
 module.exports = {
   root: true,
 
-  ignorePatterns: ['node_modules', 'build', 'dist', '!.*', 'examples'],
+  ignorePatterns: [
+    'node_modules',
+    'build',
+    'dist',
+    '!.*',
+    'examples',
+  ],
 
   overrides: [
     {
-      files: ['*.js', '*.mjs', '*.cjs'],
+      files: [
+        '*.js',
+        '*.mjs',
+        '*.cjs',
+      ],
       parserOptions: {
         ecmaVersion: 'latest',
       },
@@ -151,12 +171,21 @@ module.exports = {
       rules: {
         ...defaultRules,
         // Helps import the correct file extension
-        'import/extensions': ['error', 'always', { ignorePackages: true }],
+        'import/extensions': [
+          'error',
+          'always',
+          { ignorePackages: true },
+        ],
         'node/no-unsupported-features/es-syntax': ['off'],
       },
     },
     {
-      files: ['*.ts', '*.mts', '*.cts', '*.tsx'],
+      files: [
+        '*.ts',
+        '*.mts',
+        '*.cts',
+        '*.tsx',
+      ],
       extends: [
         'eslint:recommended',
         'plugin:unicorn/recommended',
@@ -164,7 +193,11 @@ module.exports = {
         'prettier',
       ],
       parser: '@typescript-eslint/parser',
-      plugins: ['@typescript-eslint', 'import', 'unicorn'],
+      plugins: [
+        '@typescript-eslint',
+        'import',
+        'unicorn',
+      ],
       parserOptions: {
         EXPERIMENTAL_useProjectService: true,
         // project: true,

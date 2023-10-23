@@ -8,10 +8,16 @@ const prettierCmd = 'prettier --ignore-unknown --write';
 
 export default {
   // Javascript sources
-  '*.{js,cjs,mjs}': [eslintCmd, prettierCmd],
+  '*.{js,cjs,mjs}': [
+    eslintCmd,
+    prettierCmd,
+  ],
 
   // Typescript sources
-  '*.{ts,cts,mts}': [eslintCmd, prettierCmd],
+  '*.{ts,cts,mts}': [
+    eslintCmd,
+    prettierCmd,
+  ],
 
   // Other files
   '*!(.{js,cjs,mjs,ts,cts,mts})': [prettierCmd],

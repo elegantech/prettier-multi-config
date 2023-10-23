@@ -36,5 +36,10 @@
       "~tests/*": ["./tests/*"]
     }
   },
-  "exclude": ["dist", "build", "**/*.{test,spec}.ts", "internal"]
+  "exclude": [
+    "dist",
+    "build",
+    "**/*.{test,spec}.ts",
+    "internal"
+  ]
 }

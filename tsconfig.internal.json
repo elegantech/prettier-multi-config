@@ -8,6 +8,13 @@
       "~internal/*": ["./internal/*"]
     }
   },
-  "include": ["./internal/configs/**/*.ts", "./src/**/*.ts"],
-  "exclude": ["dist", "build", "**/*.{test,spec}.ts"]
+  "include": [
+    "./internal/configs/**/*.ts",
+    "./src/**/*.ts"
+  ],
+  "exclude": [
+    "dist",
+    "build",
+    "**/*.{test,spec}.ts"
+  ]
 }

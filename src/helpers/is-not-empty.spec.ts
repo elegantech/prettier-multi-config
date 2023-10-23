@@ -2,6 +2,8 @@ import { describe, expect, test } from 'vitest';
 
 import { isNotEmpty } from './is-not-empty';
 
+// prettier-multiline-arrays-set-threshold: 3
+
 describe('isNotEmpty(💬)', () => {
   test.each([
     ['number', 0],
