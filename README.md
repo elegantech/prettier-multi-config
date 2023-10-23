@@ -90,7 +90,7 @@ Compatibility with Shell Script for Bash or sh.
 npm add -D prettier-plugin-sh
 ```
 
-### Multiline preset (`sh`)
+### Multiline preset (`multiline`)
 
 Multiline elements for some languages.
 
